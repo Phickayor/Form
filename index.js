@@ -1,9 +1,12 @@
-const { configDotenv } = require("dotenv");
 const express = require("express");
+require("dotenv").config();
 const fs = require("fs");
 const app = express();
 app.use(express.json());
-require 
+const AdminData = {
+  email: process.env.ADMIN_EMAIL,
+  pswd: process.env.ADMIN_PSWD
+};
 const AddUser = (userData) => {
   // Specify the file path you want to modify
   const filePath = "example.txt";
