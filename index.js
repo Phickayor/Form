@@ -1,8 +1,9 @@
 const express = require("express");
-require("dotenv").config();
 const fs = require("fs");
 const app = express();
-app.use(express.json());
+const bodyParser = require("body-parser");
+const cors = require("cors");
+require("dotenv").config();
 const AdminData = {
   email: process.env.ADMIN_EMAIL,
   pswd: process.env.ADMIN_PSWD
